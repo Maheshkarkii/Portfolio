@@ -23,8 +23,8 @@
 
     /* Circular avatar */
     .avatar-box {
-      width: 130px;
-      height: 130px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       overflow: hidden;
     }
@@ -36,6 +36,152 @@
       object-position: center 40%;
       display: block;
     }
+
+    /* Portfolio Filter Styles */
+    .desktop-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+      justify-content: center;
+    }
+
+    .desktop-filter .filter-item button {
+      padding: 10px 20px;
+      border: 2px solid #f59e0b;
+      background: transparent;
+      color: #f59e0b;
+      border-radius: 25px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+
+    .desktop-filter .filter-item button:hover,
+    .desktop-filter .filter-item button.active {
+      background: #f59e0b;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+
+    .mobile-filter {
+      display: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .desktop-filter {
+        display: none;
+      }
+      .mobile-filter {
+        display: block;
+      }
+    }
+
+    /* Blog Coming Soon Styles */
+    .blog-coming-soon {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-coming-soon-icon {
+      font-size: 64px;
+      color: #f59e0b;
+      margin-bottom: 24px;
+      opacity: 0.8;
+    }
+
+    .blog-coming-soon-title {
+      color: #1e293b;
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .blog-coming-soon-text {
+      color: #64748b;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .blog-coming-soon-status {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 30px;
+      background: rgba(245, 158, 11, 0.1);
+      border-radius: 15px;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+    }
+
+    .status-indicator {
+      background: #f59e0b;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .status-text {
+      color: #475569;
+      font-size: 14px;
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Portfolio Description Styling */
+    .portfolio-description {
+      color: #64748b;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 16px;
+      max-width: 600px;
+      font-weight: 400;
+    }
+
+    /* Enhanced Professional Styling */
+    .service-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      color: #1e293b;
+    }
+
+    .service-item-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #1e293b;
+    }
+
+    .service-item-text {
+      line-height: 1.6;
+      color: #475569;
+    }
+
+    .about-text p {
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+
+
 
     @media (prefers-color-scheme: dark) {
       html, body { background-color: #0f0f10; color: #eaeaea; }
@@ -54,6 +200,63 @@
       .contact .form-input { border-color: #2a2b2f; }
       a, .social-link { color: #9ecbff; }
       .project-item-icon-box, .icon-box { background-color: #22242a; color: #eaeaea; }
+      
+      /* Dark theme for desktop filter buttons */
+      .desktop-filter .filter-item button {
+        border-color: #fbbf24;
+        color: #fbbf24;
+      }
+      .desktop-filter .filter-item button:hover,
+      .desktop-filter .filter-item button.active {
+        background: #fbbf24;
+        color: #1e293b;
+        box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+      }
+
+      /* Dark theme for blog coming soon */
+      .blog-coming-soon {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        border-color: #475569;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .blog-coming-soon-title {
+        color: #f1f5f9;
+      }
+
+      .blog-coming-soon-text {
+        color: #cbd5e1;
+      }
+
+      .blog-coming-soon-status {
+        background: rgba(251, 191, 36, 0.1);
+        border-color: rgba(251, 191, 36, 0.2);
+      }
+
+      .status-text {
+        color: #94a3b8;
+      }
+
+      /* Dark theme for enhanced professional styling */
+      .portfolio-description {
+        color: #cbd5e1;
+      }
+
+      .service-title {
+        color: #f1f5f9;
+      }
+
+      .service-item-title {
+        color: #f1f5f9;
+      }
+
+      .service-item-text {
+        color: #cbd5e1;
+      }
+
+      .about-text p {
+        color: #e2e8f0;
+      }
     }
   </style>
 
@@ -166,17 +369,7 @@
             </a>
           </li>
 
-          <li class="social-item">
-            <a href="https://www.facebook.com/mahesh.karki.71465" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
 
-          <li class="social-item">
-            <a href="#" class="social-link" aria-label="Twitter">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
 
           <li class="social-item">
             <a href="https://www.instagram.com/m_karkii.11/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -248,14 +441,18 @@
 
         <section class="about-text">
           <p>
-            I'm Mahesh Karki, an AI &amp; Data Science student passionate about machine learning, data analysis,
-            and building intelligent applications that solve real-world problems.
+            I'm Mahesh Karki, a dedicated AI &amp; Data Science student with a passion for transforming complex data into strategic insights. 
+            My expertise lies in developing machine learning solutions that address real-world business challenges and drive data-informed decision making.
           </p>
 
           <p>
-            I enjoy turning raw data into actionable insights and deploying models end-to-end. My interests include
-            computer vision, NLP, and MLOps. I'm continuously learning and exploring projects that blend software
-            engineering with data-driven decision making.
+            I specialize in end-to-end machine learning pipeline development, from data preprocessing and feature engineering to model deployment and monitoring. 
+            My research interests encompass computer vision, natural language processing, and MLOps, with a focus on scalable, production-ready AI solutions.
+          </p>
+
+          <p>
+            Currently pursuing my BTech in AI &amp; Data Science, I'm committed to continuous learning and staying at the forefront of emerging technologies. 
+            I believe in the power of data to unlock new possibilities and create meaningful impact across industries.
           </p>
         </section>
 
@@ -266,22 +463,21 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">What I'm doing</h3>
+          <h3 class="h3 service-title">Core Competencies</h3>
 
           <ul class="service-list">
 
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Machine Learning</h4>
+                <h4 class="h4 service-item-title">Machine Learning & AI</h4>
 
                 <p class="service-item-text">
-                  Building and evaluating ML models for classification, regression, and clustering.
+                  Developing and deploying advanced ML models for classification, regression, clustering, and deep learning applications.
                 </p>
               </div>
 
@@ -294,10 +490,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Analysis</h4>
+                <h4 class="h4 service-item-title">Advanced Data Analytics</h4>
 
                 <p class="service-item-text">
-                  Cleaning, exploring, and visualizing data to derive actionable insights.
+                  Conducting comprehensive data analysis, statistical modeling, and exploratory data science to extract strategic business insights.
                 </p>
               </div>
 
@@ -310,10 +506,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">SQL</h4>
+                <h4 class="h4 service-item-title">Database Management & SQL</h4>
 
                 <p class="service-item-text">
-                  Writing efficient queries for joins, aggregations, and data cleaning.
+                  Designing efficient database architectures and writing optimized SQL queries for complex data operations and business intelligence.
                 </p>
               </div>
 
@@ -326,10 +522,10 @@
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Visualization</h4>
+                <h4 class="h4 service-item-title">Data Visualization & BI</h4>
 
                 <p class="service-item-text">
-                  Creating clear charts and dashboards to communicate insights.
+                  Creating compelling data visualizations, interactive dashboards, and business intelligence solutions for stakeholder communication.
                 </p>
               </div>
 
@@ -402,16 +598,7 @@
               </a>
             </li>
 
-            <li class="social-item">
-              <a href="https://www.facebook.com/mahesh.karki.71465" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-            <li class="social-item">
-              <a href="#" class="social-link" aria-label="Twitter">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
+
             <li class="social-item">
               <a href="https://www.instagram.com/m_karkii.11/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <ion-icon name="logo-instagram"></ion-icon>
@@ -614,53 +801,60 @@
 
         <header>
           <h2 class="h2 article-title">Portfolio</h2>
+          <p class="portfolio-description">
+           
+          </p>
         </header>
 
         <section class="projects">
-          <ul class="filter-list">
-
+          <!-- Desktop Category Buttons - Always Visible -->
+          <ul class="filter-list desktop-filter">
             <li class="filter-item">
-              <button class="active" data-filter-btn>Projects</button>
+              <button class="active" data-filter-btn data-category="all">All</button>
             </li>
-
+            <li class="filter-item">
+              <button data-filter-btn data-category="machine learning">Machine Learning</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn data-category="data analysis">Data Analysis</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn data-category="data visualization">Data Visualization</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn data-category="predictive modeling">Predictive Modeling</button>
+            </li>
           </ul>
 
-          <div class="filter-select-box">
-
+          <!-- Mobile Dropdown - Hidden on Desktop -->
+          <div class="filter-select-box mobile-filter">
             <button class="filter-select" data-select>
-
               <div class="select-value" data-selecct-value>Select category</div>
-
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
-
             </button>
-
             <ul class="select-list">
-
               <li class="select-item">
                 <button data-select-item>All</button>
               </li>
-
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Machine Learning</button>
               </li>
-
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Data Analysis</button>
               </li>
-
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>Data Visualization</button>
               </li>
-
+              <li class="select-item">
+                <button data-select-item>Predictive Modeling</button>
+              </li>
             </ul>
-
           </div>
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="predictive modeling">
               <a href="#">
 
                 <figure class="project-img">
@@ -678,7 +872,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="machine learning">
               <a href="#">
 
                 <figure class="project-img">
@@ -696,7 +890,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="machine learning">
               <a href="#">
 
                 <figure class="project-img">
@@ -714,7 +908,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
+            <li class="project-item  active" data-filter-item data-category="predictive modeling">
               <a href="#">
 
                 <figure class="project-img">
@@ -732,7 +926,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="data analysis">
               <a href="#">
 
                 <figure class="project-img">
@@ -773,176 +967,27 @@
         </header>
 
         <section class="blog-posts">
-
-          <!--<ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
+          <div class="blog-coming-soon">
+            <div class="blog-coming-soon-icon">
+              <ion-icon name="newspaper-outline"></ion-icon>
+            </div>
+            <h3 class="h3 blog-coming-soon-title">Knowledge Sharing Platform</h3>
+            <p class="blog-coming-soon-text">
+              I'm developing comprehensive content covering advanced data science methodologies, machine learning implementations, 
+              and industry best practices. The platform will feature technical deep-dives, case studies, and practical insights.
+            </p>
+            <div class="blog-coming-soon-status">
+              <span class="status-indicator">Under Development</span>
+              <p class="status-text">Creating valuable content for the data science and AI community</p>
+            </div>
+          </div>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
 
-                <div class="blog-content">
 
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
 
-                    <span class="dot"></span>
 
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li> -->
 
           </ul>
 
