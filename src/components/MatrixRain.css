@@ -1,0 +1,59 @@
+.matrix-rain {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.matrix-toggle {
+    position: fixed;
+    top: 1.2rem;
+    left: 1.5rem;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.9rem;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    font-family: var(--font-primary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.matrix-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.matrix-toggle--active {
+    background: linear-gradient(135deg, #00ff46 0%, #00cc37 100%);
+    color: #000;
+    border-color: #00ff46;
+}
+
+.matrix-toggle__icon {
+    font-size: 0.95rem;
+}
+
+.matrix-toggle__label {
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .matrix-toggle {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.65rem;
+    }
+
+    .matrix-toggle__label {
+        display: none;
+    }
+}

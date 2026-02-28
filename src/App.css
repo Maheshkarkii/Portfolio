@@ -1,0 +1,48 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ═══ PAPER GRAIN OVERLAY ═══ */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+
+[data-theme="dark"] .grain-overlay {
+  opacity: 0.05;
+}
+
+/* ═══ SECTION DIVIDERS ═══ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.section-divider__ornament {
+  font-size: 0.6rem;
+  color: var(--color-accent);
+  padding: 0 1.2rem;
+  letter-spacing: 2px;
+  user-select: none;
+}

@@ -1,0 +1,17 @@
+.mouse-spotlight {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(400px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+            rgba(100, 100, 255, 0.04) 0%,
+            transparent 70%);
+}
+
+[data-theme="dark"] .mouse-spotlight {
+    background: radial-gradient(400px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+            rgba(140, 140, 255, 0.06) 0%,
+            transparent 70%);
+}

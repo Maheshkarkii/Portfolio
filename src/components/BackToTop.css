@@ -1,0 +1,41 @@
+.back-to-top {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 1.5rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--color-card-bg);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.4s var(--ease-out-expo);
+    z-index: 999;
+}
+
+.back-to-top--visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.back-to-top:hover {
+    background: var(--color-text);
+    color: #fff;
+    border-color: var(--color-text);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .back-to-top:hover {
+    background: #fff;
+    color: #1a1a1a;
+    border-color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}

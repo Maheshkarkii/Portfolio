@@ -1,0 +1,30 @@
+.sound-toggle {
+    position: fixed;
+    bottom: 12rem;
+    left: 1.5rem;
+    z-index: 999;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sound-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sound-toggle__icon {
+    font-size: 1.1rem;
+}
+
+.sound-toggle--off {
+    opacity: 0.5;
+}

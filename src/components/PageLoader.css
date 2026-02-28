@@ -1,0 +1,64 @@
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.loader--exit {
+    transform: translateY(-100%);
+}
+
+.loader__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.loader__name {
+    font-family: var(--font-display, 'Outfit', sans-serif);
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 6px;
+    animation: loaderPulse 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes loaderPulse {
+    from {
+        opacity: 0.4;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.loader__bar {
+    width: 120px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.loader__bar-fill {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    border-radius: 1px;
+    animation: loaderFill 1.4s ease-out forwards;
+}
+
+@keyframes loaderFill {
+    to {
+        width: 100%;
+    }
+}

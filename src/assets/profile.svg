@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" fill="none">
+  <rect width="400" height="550" fill="#f0f0f0"/>
+  <!-- Silhouette body -->
+  <ellipse cx="200" cy="170" rx="65" ry="72" fill="#d0d0d0"/>
+  <ellipse cx="200" cy="155" rx="55" ry="60" fill="#c8c8c8"/>
+  <!-- Torso -->
+  <path d="M100 550 Q100 350 200 320 Q300 350 300 550 Z" fill="#1e2a3a"/>
+  <!-- Neck -->
+  <rect x="175" y="220" width="50" height="40" rx="8" fill="#d0d0d0"/>
+  <!-- Head -->
+  <ellipse cx="200" cy="160" rx="60" ry="68" fill="#d8d8d8"/>
+  <!-- Hair -->
+  <path d="M140 140 Q140 90 200 85 Q260 90 260 140 Q258 110 200 105 Q142 110 140 140Z" fill="#5a4a3a"/>
+  <!-- Eyes -->
+  <ellipse cx="178" cy="155" rx="6" ry="4" fill="#3a3a3a"/>
+  <ellipse cx="222" cy="155" rx="6" ry="4" fill="#3a3a3a"/>
+  <!-- Nose -->
+  <path d="M197 162 L200 175 L203 172" stroke="#bbb" stroke-width="1.5" fill="none"/>
+  <!-- Mouth -->
+  <path d="M188 185 Q200 192 212 185" stroke="#b0a0a0" stroke-width="1.5" fill="none"/>
+  <!-- Ears -->
+  <ellipse cx="140" cy="160" rx="8" ry="14" fill="#d0d0d0"/>
+  <ellipse cx="260" cy="160" rx="8" ry="14" fill="#d0d0d0"/>
+</svg>

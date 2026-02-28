@@ -1,0 +1,72 @@
+.easter-egg {
+    position: fixed;
+    inset: 0;
+    z-index: 99998;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.easter-egg__message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-display, 'Outfit', sans-serif);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    animation: eggFadeIn 0.5s ease forwards, eggFadeOut 0.8s ease 3s forwards;
+    z-index: 2;
+}
+
+.easter-egg__message small {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+@keyframes eggFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes eggFadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.easter-egg__confetti {
+    position: absolute;
+    top: -10px;
+    border-radius: 2px;
+    animation: confettiFall linear forwards;
+    transform: rotate(var(--rotation, 0deg));
+}
+
+@keyframes confettiFall {
+    0% {
+        top: -10px;
+        opacity: 1;
+        transform: rotate(0deg) translateX(0);
+    }
+
+    100% {
+        top: 110vh;
+        opacity: 0;
+        transform: rotate(720deg) translateX(calc(var(--rotation, 20deg) * 0.5));
+    }
+}

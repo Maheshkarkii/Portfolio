@@ -1,0 +1,245 @@
+/* ═══════════════════════════════════════════
+   RESUME SECTION – MODERN RETRO CLASSIC
+   ═══════════════════════════════════════════ */
+
+.resume {
+    width: 100%;
+    padding: 6rem 2rem;
+    position: relative;
+    background: var(--color-bg);
+}
+
+/* ─── Header ─── */
+.resume__header {
+    max-width: 900px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+}
+
+.resume__watermark {
+    display: none;
+}
+
+.resume__heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.resume__number {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-accent);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* ─── Two-column layout ─── */
+.resume__content {
+    display: flex;
+    gap: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.resume__left {
+    flex: 0 0 38%;
+}
+
+.resume__right {
+    flex: 1;
+}
+
+/* ─── Section titles ─── */
+.resume__section {
+    margin-bottom: 2rem;
+}
+
+.resume__section-title {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.resume__section-title--exp {
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ─── Education ─── */
+.resume__edu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.2rem;
+}
+
+.resume__edu-marker {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 0;
+    background: var(--color-accent);
+    border: none;
+    margin-top: 7px;
+    position: relative;
+}
+
+.resume__edu-marker::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 30px;
+    background: var(--color-border);
+}
+
+.resume__edu-item:last-child .resume__edu-marker::after {
+    display: none;
+}
+
+.resume__edu-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume__edu-name {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1.3;
+}
+
+.resume__edu-year {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.5px;
+}
+
+.resume__edu-desc {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+/* ─── Experiences ─── */
+.resume__exp-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume__exp-item {
+    position: relative;
+    padding: 1.3rem 0;
+    border-top: 1px solid var(--color-border);
+    transition: padding 0.3s ease;
+}
+
+.resume__exp-item:last-child {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.resume__exp-item:hover {
+    padding-left: 0.6rem;
+}
+
+.resume__exp-company {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: 0;
+    text-transform: none;
+    margin-bottom: 0.15rem;
+}
+
+.resume__exp-role {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.3px;
+}
+
+.resume__exp-sep {
+    margin: 0 0.4rem;
+    color: var(--color-border);
+}
+
+.resume__exp-desc {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+/* ─── Entrance Animations ─── */
+.resume .animate-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: resumeFadeIn 0.7s var(--ease-out-expo) forwards;
+}
+
+@keyframes resumeFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resume__header.animate-in {
+    animation-delay: 0s;
+}
+
+.resume__left .resume__section.animate-in {
+    animation-delay: 0.1s;
+}
+
+.resume__right .resume__section.animate-in {
+    animation-delay: 0.15s;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+    .resume {
+        padding: 4rem 1.5rem;
+    }
+
+    .resume__content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .resume__left {
+        flex: none;
+    }
+}
+
+/* ═══ DARK MODE ═══ */
+[data-theme="dark"] .resume__edu-marker {
+    background: var(--color-accent);
+}

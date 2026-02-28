@@ -1,0 +1,49 @@
+.retro-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: difference;
+    will-change: transform;
+}
+
+.retro-cursor__icon {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.2));
+    transition: transform 0.15s var(--ease-out-expo);
+}
+
+.pixel-svg path {
+    fill: var(--color-text);
+    /* Optional: white outline for visibility */
+    stroke: var(--color-bg);
+    stroke-width: 1px;
+}
+
+/* Hover State - Hand Icon */
+.retro-cursor--hover .retro-cursor__icon {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+/* Click State */
+.retro-cursor--click .retro-cursor__icon {
+    transform: scale(0.9) rotate(-15deg);
+}
+
+/* Hide default cursor on body (usually handled in index.css but reinforced here if needed) */
+body {
+    cursor: none;
+}
+
+/* Hide on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .retro-cursor {
+        display: none;
+    }
+
+    body {
+        cursor: auto;
+    }
+}

@@ -1,0 +1,129 @@
+.share-button {
+    position: fixed;
+    bottom: 6.5rem;
+    left: 1.5rem;
+    z-index: 999;
+}
+
+.share-button__toggle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.share-button__toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.share-button--open .share-button__toggle {
+    background: var(--color-text);
+    color: #fff;
+}
+
+[data-theme="dark"] .share-button__toggle {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .share-button--open .share-button__toggle {
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.share-button__menu {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 0.4rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 140px;
+    animation: shareMenuIn 0.25s var(--ease-out-expo);
+}
+
+@keyframes shareMenuIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.share-button__option {
+    padding: 0.55rem 0.8rem;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    white-space: nowrap;
+}
+
+.share-button__option:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .share-button__option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.share-toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 99999;
+    animation: shareToastIn 0.3s var(--ease-out-expo), shareToastOut 0.3s var(--ease-out-expo) 2.2s both;
+}
+
+@keyframes shareToastIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes shareToastOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
