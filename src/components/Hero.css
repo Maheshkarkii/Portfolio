@@ -27,6 +27,27 @@
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero__hello {
+    display: inline-block;
+    animation: helloFade 0.6s ease;
+}
+
+@keyframes helloFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ─── Name ─── */

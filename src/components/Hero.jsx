@@ -7,17 +7,23 @@ function Hero() {
     const [charIndex, setCharIndex] = useState(0)
     const [isDeleting, setIsDeleting] = useState(false)
     const [typedText, setTypedText] = useState('')
-    const [greeting, setGreeting] = useState("Hello, I'm")
+    const [timeGreeting, setTimeGreeting] = useState('')
+    const [isNepali, setIsNepali] = useState(false)
 
     useEffect(() => {
         const hour = new Date().getHours()
-        let text = 'Hello, '
-        if (hour < 5) text += 'Good Evening!'
-        else if (hour < 12) text += 'Good Morning!'
-        else if (hour < 17) text += 'Good Afternoon!'
-        else if (hour < 21) text += 'Good Evening!'
-        else text += 'Good Evening!'
-        setGreeting(text)
+        if (hour < 5) setTimeGreeting('Good Evening!')
+        else if (hour < 12) setTimeGreeting('Good Morning!')
+        else if (hour < 17) setTimeGreeting('Good Afternoon!')
+        else setTimeGreeting('Good Evening!')
+    }, [])
+
+    // Alternate Hello / नमस्ते every 3 seconds
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setIsNepali(prev => !prev)
+        }, 3000)
+        return () => clearInterval(timer)
     }, [])
 
     const roles = [
@@ -67,7 +73,12 @@ function Hero() {
         <section className="hero" ref={heroRef} id="hero">
             <div className="hero__content">
                 <div className="hero__text">
-                    <p className="hero__greeting animate-in">{greeting}</p>
+                    <p className="hero__greeting animate-in">
+                        <span className="hero__hello" key={isNepali ? 'np' : 'en'}>
+                            {isNepali ? 'नमस्ते' : 'Hello'}
+                        </span>
+                        <span>, {timeGreeting}</span>
+                    </p>
                     <h1 className="hero__heading animate-in">Mahesh Karki</h1>
 
                     <div className="hero__typed animate-in">
