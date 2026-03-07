@@ -1,0 +1,260 @@
+/* ═══════════════════════════════════════════
+   SKILLS TERMINAL – RETRO TERMINAL AESTHETIC
+   ═══════════════════════════════════════════ */
+
+.skills-terminal {
+    padding: 5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ─── Section Header ─── */
+.skills-terminal__header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.skills-terminal__number {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.skills-terminal__heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: -0.5px;
+}
+
+/* ─── Terminal Window ─── */
+.skills-terminal__window {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background: #0d1117;
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -2px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* ─── Title Bar ─── */
+.skills-terminal__titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.75rem 1rem;
+    background: #161b22;
+    border-bottom: 1px solid #21262d;
+}
+
+.skills-terminal__dots {
+    display: flex;
+    gap: 6px;
+}
+
+.skills-terminal__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.skills-terminal__dot--red {
+    background: #ff5f56;
+}
+
+.skills-terminal__dot--yellow {
+    background: #ffbd2e;
+}
+
+.skills-terminal__dot--green {
+    background: #27c93f;
+}
+
+.skills-terminal__title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: #8b949e;
+    letter-spacing: 0.5px;
+}
+
+/* ─── Terminal Body ─── */
+.skills-terminal__body {
+    padding: 1.5rem;
+    min-height: 280px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    line-height: 1.8;
+}
+
+.skills-terminal__line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skills-terminal__line--comment {
+    color: #6e7681;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+}
+
+.skills-terminal__prompt {
+    color: #27c93f;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.skills-terminal__cmd {
+    color: #79c0ff;
+    font-weight: 500;
+}
+
+.skills-terminal__arg {
+    color: #d2a8ff;
+}
+
+/* ─── Category Groups ─── */
+.skills-terminal__category {
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: none;
+}
+
+.skills-terminal__category--visible {
+    animation: terminalFadeIn 0.5s ease forwards;
+}
+
+@keyframes terminalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ─── Skill Tags ─── */
+.skills-terminal__output {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0.3rem 1.2rem;
+}
+
+.skills-terminal__skill {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    background: #1c2433;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    color: #e6edf3;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.skills-terminal__skill--visible {
+    animation: skillPop 0.35s ease forwards;
+}
+
+@keyframes skillPop {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.skills-terminal__skill:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: rgba(200, 85, 61, 0.1);
+    transform: scale(1.05);
+}
+
+/* ─── Blinking Cursor ─── */
+.skills-terminal__line--cursor {
+    margin-top: 0.5rem;
+    opacity: 0;
+}
+
+.skills-terminal__line--cursor-visible {
+    animation: terminalFadeIn 0.4s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.skills-terminal__blink {
+    color: #27c93f;
+    animation: cursorTerminalBlink 1s step-end infinite;
+    font-size: 0.85rem;
+}
+
+@keyframes cursorTerminalBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ─── Scanline Overlay ─── */
+.skills-terminal__scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 1;
+    opacity: 0.03;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.08) 2px,
+            rgba(255, 255, 255, 0.08) 4px);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+    .skills-terminal__body {
+        padding: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .skills-terminal__output {
+        gap: 0.35rem;
+    }
+
+    .skills-terminal__skill {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.5rem;
+    }
+}

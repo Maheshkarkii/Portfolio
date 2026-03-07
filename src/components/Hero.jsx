@@ -12,11 +12,11 @@ function Hero() {
     useEffect(() => {
         const hour = new Date().getHours()
         let text = 'Hello, '
-        if (hour < 5) text += 'Good Night!'
+        if (hour < 5) text += 'Good Evening!'
         else if (hour < 12) text += 'Good Morning!'
         else if (hour < 17) text += 'Good Afternoon!'
         else if (hour < 21) text += 'Good Evening!'
-        else text += 'Good Night!'
+        else text += 'Good Evening!'
         setGreeting(text)
     }, [])
 

@@ -4,6 +4,7 @@ import ThemeToggle from './components/ThemeToggle'
 import TopNav from './components/TopNav'
 import Hero from './components/Hero'
 import Resume from './components/Resume'
+import SkillsTerminal from './components/SkillsTerminal'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 
@@ -24,6 +25,12 @@ function App() {
       </div>
 
       <Resume />
+
+      <div className="section-divider">
+        <span className="section-divider__ornament">✦</span>
+      </div>
+
+      <SkillsTerminal />
 
       <div className="section-divider">
         <span className="section-divider__ornament">✦</span>
