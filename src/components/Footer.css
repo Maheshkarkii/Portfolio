@@ -115,6 +115,33 @@
     gap: 0.6rem;
 }
 
+/* ─── Location Badge ─── */
+.footer__location {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.footer__location svg {
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.footer__location-sep {
+    opacity: 0.3;
+}
+
+.footer__location-time {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
 .footer__social-link {
     width: 32px;
     height: 32px;
