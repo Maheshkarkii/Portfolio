@@ -38,7 +38,8 @@ function TopNav() {
     const navLinks = [
         { id: 'hero', label: 'Home' },
         { id: '01', label: 'Resume' },
-        { id: '02', label: 'Projects' },
+        { id: '02', label: 'Toolkit' },
+        { id: '03', label: 'Projects' },
         { id: 'contact', label: 'Contact' },
     ]
 

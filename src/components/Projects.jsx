@@ -79,9 +79,9 @@ function Projects() {
     }, [])
 
     return (
-        <section className="projects" ref={sectionRef} id="02">
+        <section className="projects" ref={sectionRef} id="03">
             <div className="projects__header animate-in">
-                <h2 className="projects__heading"><span className="projects__number">02 —</span> Projects</h2>
+                <h2 className="projects__heading"><span className="projects__number">03 —</span> Projects</h2>
                 <p className="projects__intro">
                     A selection of projects showcasing my work in AI, machine learning,
                     data science, and real-world intelligent applications.

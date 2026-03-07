@@ -40,9 +40,9 @@ function SkillsTerminal() {
     }, [])
 
     return (
-        <section className="skills-terminal" ref={sectionRef} id="skills">
+        <section className="skills-terminal" ref={sectionRef} id="02">
             <div className="skills-terminal__header">
-                <span className="skills-terminal__number">03 —</span>
+                <span className="skills-terminal__number">02 —</span>
                 <h2 className="skills-terminal__heading">Toolkit</h2>
             </div>
 
