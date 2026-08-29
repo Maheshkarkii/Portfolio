@@ -5,12 +5,17 @@ const skillCategories = [
     {
         category: 'Languages',
         icon: '⟩',
-        skills: ['Python', 'SQL', 'JavaScript', 'R', 'C++'],
+        skills: ['Python', 'SQL', 'R', 'C++'],
+    },
+    {
+        category: 'AI & LLM Frameworks',
+        icon: '⟩',
+        skills: ['Hugging Face Transformers', 'LangChain', 'LangGraph', 'RAG & Data Integration'],
     },
     {
         category: 'ML / DL Frameworks',
         icon: '⟩',
-        skills: ['TensorFlow', 'PyTorch', 'Keras', 'scikit-learn', 'XGBoost'],
+        skills: ['PyTorch', 'scikit-learn', 'XGBoost', 'OpenCV'],
     },
     {
         category: 'Data & Analytics',

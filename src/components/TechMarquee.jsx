@@ -1,10 +1,10 @@
 import './TechMarquee.css'
 
 const techs = [
-    'Python', 'TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas', 'NumPy',
-    'SQL', 'Power BI', 'OpenCV', 'Keras', 'Matplotlib', 'Streamlit',
-    'Deep Learning', 'NLP', 'Computer Vision', 'Data Analysis',
-    'Git', 'JavaScript', 'React', 'REST APIs'
+    'Python', 'PyTorch', 'LangChain', 'LangGraph', 'Hugging Face', 'RAG & Vector DBs',
+    'scikit-learn', 'Pandas', 'NumPy', 'SQL', 'Power BI', 'OpenCV',
+    'Deep Learning', 'NLP', 'Computer Vision', 'Data Integration',
+    'Git', 'FastAPI', 'Streamlit'
 ]
 
 function TechMarquee() {
