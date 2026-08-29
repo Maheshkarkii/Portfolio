@@ -27,10 +27,10 @@ function Hero() {
     }, [])
 
     const roles = [
-        'AI Engineer',
-        'ML Engineer',
+        'Artificial Intelligence Engineer',
+        'Machine Learning Engineer',
+        'AI & DS Graduate',
         'Deep Learning Practitioner',
-        'Intelligent Systems Builder',
     ]
 
     // Typing animation
@@ -88,8 +88,8 @@ function Hero() {
 
                     <div className="hero__bio animate-in">
                         <p>
-                            AI Engineer &amp; ML Engineer (B.Tech in AI &amp; Data Science, Kurukshetra University).
-                            Passionate about machine learning, deep learning, RAG systems, and building intelligent end-to-end applications.
+                            Artificial Intelligence Engineer &amp; Machine Learning Engineer — Artificial Intelligence &amp; Data Science Graduate from Kurukshetra University.
+                            Passionate about deep learning, RAG systems, and building intelligent end-to-end applications.
                         </p>
                     </div>
 
