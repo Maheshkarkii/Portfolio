@@ -5,7 +5,7 @@ import './ChatBot.css'
 const knowledge = [
     {
         keys: ['who', 'about', 'yourself', 'mahesh', 'introduce', 'tell me'],
-        answer: "Mahesh Karki is a 4th-year B.Tech student in Artificial Intelligence & Data Science at Kurukshetra University, India. He's passionate about machine learning, data-driven solutions, and building intelligent applications."
+        answer: "Mahesh Karki is an AI Engineer & ML Engineer (B.Tech student in AI & DS at Kurukshetra University, India). He's passionate about machine learning, deep learning, RAG systems, and building intelligent end-to-end applications."
     },
     {
         keys: ['skill', 'tech', 'stack', 'technology', 'good at', 'know', 'tools'],
