@@ -17,14 +17,15 @@
   --color-border: #ddd8cf;
   --color-card-bg: #fffdf9;
   
-  /* Remembered Previous Serif Font */
+  /* Saved Font Presets */
   --font-heading-serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
   --font-heading-space: 'Space Grotesk', sans-serif;
+  --font-heading-jakarta: 'Plus Jakarta Sans', sans-serif;
 
-  /* Active Typography: Plus Jakarta Sans */
-  --font-heading: 'Plus Jakarta Sans', 'Outfit', sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  /* Active Typography: Official Apple SF Pro System Stack */
+  --font-heading: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "SF Pro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
