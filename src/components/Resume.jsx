@@ -64,10 +64,10 @@ function Resume() {
 
                         <div className="resume__exp-list">
                             {[
-                                { company: 'INTELLIML', role: 'Major Project — Engineering', period: 'Early 2026', desc: 'Built IntelliML — an automated machine learning pipeline with a FastAPI backend and Node.js frontend that streamlines the entire data science workflow from data preprocessing and feature engineering to model selection, training, and evaluation.' },
+                                { company: 'INTELLIML', role: 'Major Project — Engineering', period: '2026', desc: 'Built IntelliML — an automated machine learning pipeline with a FastAPI backend and Node.js frontend that streamlines the entire data science workflow from data preprocessing and feature engineering to model selection, training, and evaluation.' },
+                                { company: 'AI RESEARCH ASSISTANT', role: 'Nexus AI (RAG)', period: '2025', desc: 'Developed Nexus AI — an intelligent AI research assistant leveraging Retrieval-Augmented Generation (RAG) and LLMs for document search and context-aware Q&A.' },
                                 { company: 'VIOLENCE DETECTION SYSTEM', role: 'Minor Project — Engineering', period: '2025', desc: 'Research and development of a real-time violence detection system using deep learning and computer vision. Designed to analyze video feeds and classify violent activities for safety and surveillance applications.' },
                                 { company: 'ML RESEARCH SYSTEM', role: 'Student Researcher', period: '2024', desc: 'Developed a machine learning model for predictive analytics using Python, scikit-learn, and PyTorch. Achieved high accuracy on real-world datasets through feature engineering and hyperparameter tuning.' },
-                                { company: 'AI RESEARCH ASSISTANT', role: 'Nexus AI (RAG)', period: '2025', desc: 'Developed Nexus AI — an intelligent AI research assistant leveraging Retrieval-Augmented Generation (RAG) and LLMs for document search and context-aware Q&A.' },
                                 { company: 'DATA SCIENCE', role: 'Academic Projects', period: '2023 – 2024', desc: 'Exploratory data analysis and visualization using Python, Pandas, and Matplotlib. Worked on real-world datasets for insights extraction and dashboard creation.' },
                             ].map((exp, i) => (
                                 <div className="resume__exp-item" key={i}>

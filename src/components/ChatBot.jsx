@@ -17,7 +17,7 @@ const knowledge = [
     },
     {
         keys: ['intelliml', 'automl', 'automat', 'pipeline', 'workflow'],
-        answer: "IntelliML was completed in Early 2026 as Mahesh's Major Engineering Project. It's an automated data science workflow that handles data preprocessing, feature engineering, model selection, and evaluation — with a human-in-the-loop system for critical decision points."
+        answer: "IntelliML was completed in 2026 as Mahesh's Major Engineering Project. It's an automated data science workflow that handles data preprocessing, feature engineering, model selection, and evaluation — with a human-in-the-loop system for critical decision points."
     },
     {
         keys: ['violence', 'detection', 'cnn', 'lstm', 'surveillance', 'alert'],
@@ -37,7 +37,7 @@ const knowledge = [
     },
     {
         keys: ['experience', 'work experience', 'intern', 'research', 'job'],
-        answer: "Mahesh's experience includes:\n• IntelliML — Major Project of Engineering (Early 2026)\n• Violence Detection System — Minor Engineering Project (2025)\n• ML Research System — Student Researcher (2024)\n• AI Research Assistant — Nexus AI (RAG) (2025)\n• Data Science — Academic Projects (2023–2024)"
+        answer: "Mahesh's experience includes:\n• IntelliML — Major Project of Engineering (2026)\n• AI Research Assistant — Nexus AI (RAG) (2025)\n• Violence Detection System — Minor Engineering Project (2025)\n• ML Research System — Student Researcher (2024)\n• Data Science — Academic Projects (2023–2024)"
     },
     {
         keys: ['language', 'speak', 'hindi', 'english', 'nepali'],

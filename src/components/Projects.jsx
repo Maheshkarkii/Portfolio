@@ -36,7 +36,7 @@ const projects = [
         id: 4,
         title: 'IntelliML',
         category: 'AutoML / AI',
-        year: 'Early 2026',
+        year: '2026',
         description: 'Built IntelliML — an end-to-end automated data science workflow that handles data preprocessing, feature engineering, model selection, and evaluation with human-in-the-loop intelligence.',
         tags: ['Python', 'FastAPI', 'Node.js', 'AutoML'],
         link: 'https://github.com/Maheshkarkii?tab=repositories',
